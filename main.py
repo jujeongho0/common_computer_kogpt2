@@ -49,7 +49,7 @@ if utter:
 
     decoded_output = tokenizer.decode_batch(sample_output.tolist())[0]
 
-    answer = decoded_output.replace(utter, '').lstrip(' ')
+    answer = decoded_output[len(utter)+1:]
 
     st.session_state.past.append(utter)
     st.session_state.generated.append(answer)
