@@ -1,11 +1,7 @@
-FROM python:3.9.8-slim-buster
-
-WORKDIR /app
-COPY requirements.txt ./requirements.txt
-RUN pip install --upgrade pip && \
-    pip install -r requirements.txt
-
-EXPOSE 8501
-COPY ./app
+FROM python:3.7-stretch
+WORKDIR /dashboard/
+COPY requirements.txt /dashboard/requirements.txt
+RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
+COPY . .
 ENTRYPOINT ["streamlit", "run"]
 CMD ["main.py"]
