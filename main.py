@@ -4,6 +4,7 @@ from transformers import GPT2Config, GPT2LMHeadModel
 import streamlit as st
 from streamlit_chat import message
 import tokenizers
+import gdown
 
 st.header("fine-tuned kogpt2를 이용한 챗봇")
 
