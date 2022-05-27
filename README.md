@@ -1,1 +1,1 @@
-# common_computer_kogpt2
+# fine-tuned kogpt2를 이용한 챗봇
