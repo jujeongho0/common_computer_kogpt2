@@ -17,7 +17,7 @@ def load():
     config = GPT2Config(vocab_size=50000)
     model = GPT2LMHeadModel(config)
     model_dir = 'my_model.bin'
-    model.load_state_dict(torch.load(model_dir))
+    model.load_state_dict(torch.load(model_dir, map_location=torch.device('cpu')))
 
     return model, tokenizer
 
